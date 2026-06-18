@@ -12,17 +12,17 @@ function CipherCard({ name, description, difficulty, to }) {
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
-      <div className="flex items-start justify-between mb-3">
-        <h2 className="text-sm font-bold text-rw uppercase tracking-widest">
-          {name}
-        </h2>
-        <span className="text-xs text-gold border border-rw/30 bg-gold-pale px-2 py-1 rounded">
-          {difficulty}
-        </span>
-        <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
-        <div className="mt-4 text-xs text-rw/50 tracking-widest uppercase">
-          Open
-        </div>
+      <h2 className="text-sm font-bold text-rw uppercase tracking-widest mb-2">
+        {name}
+      </h2>
+      <span className="text-xs text-gold border border-rw/30 bg-gold-pale px-2 py-1 rounded mb-3">
+        {difficulty}
+      </span>
+      <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+        {description}
+      </p>
+      <div className="mt-4 text-xs text-rw/50 tracking-widest uppercase">
+        Open
       </div>
     </motion.div>
   );
