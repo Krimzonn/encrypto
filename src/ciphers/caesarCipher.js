@@ -25,8 +25,8 @@ export function caesarDecrypt(text, shift) {
 export function bruteForce(text) {
   const result = [];
 
-  for (let shift = 0; shift <= 25; shift++) {
-    result.push({ shift, text: ceasarDecrypt(text, shift) });
+  for (let shift = 1; shift <= 25; shift++) {
+    result.push({ shift, text: caesarDecrypt(text, shift) });
   }
 
   return result;

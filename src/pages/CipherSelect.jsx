@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import CipherCard from "../components/CipherCard";
+import PageWrapper from "../components/PageWrapper";
+import FadeIn from "../components/FadeIn";
 
 const ciphers = [
   {
@@ -28,20 +30,28 @@ const ciphers = [
 function CipherSelect() {
   return (
     <>
-      <Navbar />
-      <div className="max-w-4xl mx-auto px-8 py-16">
-        <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-2">
-          Cipher Library
-        </p>
-        <h1 className="text-3xl font-bold text-rw mb-10">
-          Choose a <span className="text-gold">cipher</span>
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {ciphers.map((cipher) => (
-            <CipherCard key={cipher.name} {...cipher} />
-          ))}
+      <PageWrapper>
+        <Navbar />
+        <div className="max-w-4xl mx-auto px-8 py-16">
+          <FadeIn delay={0.1}>
+            <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-2">
+              Cipher Library
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <h1 className="text-3xl font-bold text-rw mb-10">
+              Choose a <span className="text-gold">cipher</span>
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.3}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {ciphers.map((cipher) => (
+                <CipherCard key={cipher.name} {...cipher} />
+              ))}
+            </div>
+          </FadeIn>
         </div>
-      </div>
+      </PageWrapper>
     </>
   );
 }
