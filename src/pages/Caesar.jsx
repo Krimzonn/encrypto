@@ -46,7 +46,11 @@ function Caesar() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <ModesTab mode={mode} setMode={setMode} />
+            <ModesTab
+              mode={mode}
+              setMode={setMode}
+              modes={["Encrypt", "Decrypt", "Brute Force"]}
+            />
           </FadeIn>
 
           <FadeIn delay={0.3}>

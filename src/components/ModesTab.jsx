@@ -1,6 +1,6 @@
 const modes = ["Encrypt", "Decrypt", "Brute Force"];
 
-function ModesTab({ mode, setMode }) {
+function ModesTab({ mode, setMode, modes }) {
   return (
     <div className="flex gap-2 m-8">
       {modes.map((m) => (
