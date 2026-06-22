@@ -23,7 +23,28 @@ const ciphers = [
     description:
       "A polyalphabetic substitution cipher using a keyword to shift letters in the plaintext.",
     difficulty: "Intermediate",
-    to: "/cipher/vignere",
+    to: "/cipher/vigenere",
+  },
+  {
+    name: "Rail Fence",
+    description:
+      "Writes your message in a zigzag pattern across rails then reads off row by row. A classic transposition cipher.",
+    difficulty: "Beginner",
+    to: "/cipher/railfence",
+  },
+  {
+    name: "XOR Cipher",
+    description:
+      "Applies a bitwise XOR operation between your message and a key. A building block of modern encryption.",
+    difficulty: "Intermediate",
+    to: "/cipher/xor",
+  },
+  {
+    name: "Base64",
+    description:
+      "Encodes binary data as readable ASCII text. Not a cipher but seen everywhere e.g JWT tokens, image encoding, APIs.",
+    difficulty: "Beginner",
+    to: "/cipher/base64",
   },
 ];
 

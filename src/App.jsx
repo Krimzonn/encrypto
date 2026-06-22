@@ -4,6 +4,7 @@ import CipherSelect from "./pages/CipherSelect";
 import Caesar from "./pages/Caesar";
 import { AnimatePresence } from "framer-motion";
 import AtBash from "./pages/AtBash";
+import Vigenere from "./pages/Vigenere";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/ciphers" element={<CipherSelect />} />
           <Route path="/cipher/caesar" element={<Caesar />} />
           <Route path="/cipher/atbash" element={<AtBash />} />
+          <Route path="/cipher/vigenere" element={<Vigenere />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>
