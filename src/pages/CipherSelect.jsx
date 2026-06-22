@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import CipherCard from "../components/CipherCard";
 import PageWrapper from "../components/PageWrapper";
@@ -49,6 +50,12 @@ const ciphers = [
 ];
 
 function CipherSelect() {
+  const [search, setSearch] = useState("");
+
+  const filteredCiphers = ciphers.filter((cipher) =>
+    cipher.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()),
+  );
+
   return (
     <>
       <PageWrapper>
@@ -64,11 +71,25 @@ function CipherSelect() {
               Choose a <span className="text-gold">cipher</span>
             </h1>
           </FadeIn>
+          <FadeIn delay={0.25}>
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search ciphers..."
+              className="w-full text-sm bg-surface border border-rw/15 rounded-lg px-4 py-3 outline-none focus:border-rw/40 transition-colors mb-8"
+            />
+          </FadeIn>
           <FadeIn delay={0.3}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {ciphers.map((cipher) => (
+              {filteredCiphers.map((cipher) => (
                 <CipherCard key={cipher.name} {...cipher} />
               ))}
+              {filteredCiphers.length === 0 && (
+                <p className="text-xs text-grat-400 col-span-2">
+                  No ciphers found matching "{search}"
+                </p>
+              )}
             </div>
           </FadeIn>
         </div>
