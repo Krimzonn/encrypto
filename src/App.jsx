@@ -5,6 +5,7 @@ import Caesar from "./pages/Caesar";
 import { AnimatePresence } from "framer-motion";
 import AtBash from "./pages/AtBash";
 import Vigenere from "./pages/Vigenere";
+import RailFence from "./pages/RailFence";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/cipher/caesar" element={<Caesar />} />
           <Route path="/cipher/atbash" element={<AtBash />} />
           <Route path="/cipher/vigenere" element={<Vigenere />} />
+          <Route path="/cipher/railfence" element={<RailFence />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>
