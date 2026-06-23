@@ -11,6 +11,17 @@
   --font-montserrat: "Montserrat", sans-serif;
 }
 
+.dark {
+  --color-surface: #1a1412;
+  --color-base: #120e0d;
+  --color-gold-pale: #2a2210;
+  --color-rw-pale: #2a1512;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--color-base);
 }

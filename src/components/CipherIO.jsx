@@ -16,7 +16,7 @@ function CipherIO({ mode, input, setInput, output }) {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type your message here..."
           rows={5}
-          className="w-full text-sm outline-none resize-none bg-transparent"
+          className="w-full text-sm outline-none resize-none bg-transparent dark:text-gray-400 dark:placeholder:text-gray-600"
         ></textarea>
       </div>
 

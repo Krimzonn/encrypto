@@ -10,7 +10,7 @@ function KeyInput({ keyword, setKeyWord }) {
           value={keyword}
           onChange={(e) => setKeyWord(e.target.value)}
           placeholder="Enter a keyword e.g KEY"
-          className="flex-1 text-sm outline-none bg-transparent border-b border-rw/20 pb-1 focus:border-rw transition-colors"
+          className="flex-1 text-sm outline-none bg-transparent border-b border-rw/20 pb-1 focus:border-rw transition-colors dark:placeholder:text-gray-600 dark:text-gray-400"
         />
         {keyword && (
           <span className="text-xs text-gold border border-gold/30 bg-gold-pale px-2 py-1 rounded tracking-widest uppercase">

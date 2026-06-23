@@ -6,8 +6,12 @@ import { AnimatePresence } from "framer-motion";
 import AtBash from "./pages/AtBash";
 import Vigenere from "./pages/Vigenere";
 import RailFence from "./pages/RailFence";
+import { useTheme } from "./hooks/useTheme";
+import XOR from "./pages/Xor";
 
 function App() {
+  useTheme();
+
   return (
     <BrowserRouter>
       <AnimatePresence mode="wait">
@@ -18,6 +22,7 @@ function App() {
           <Route path="/cipher/atbash" element={<AtBash />} />
           <Route path="/cipher/vigenere" element={<Vigenere />} />
           <Route path="/cipher/railfence" element={<RailFence />} />
+          <Route path="/cipher/xor" element={<XOR />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>

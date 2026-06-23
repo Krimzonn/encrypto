@@ -77,7 +77,7 @@ function CipherSelect() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search ciphers..."
-              className="w-full text-sm bg-surface border border-rw/15 rounded-lg px-4 py-3 outline-none focus:border-rw/40 transition-colors mb-8"
+              className="w-full text-sm bg-surface border border-rw/15 rounded-lg px-4 py-3 outline-none focus:border-rw/40 transition-colors mb-8 dark:text-gray-200 dark:placeholder:text-gray-600"
             />
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -86,7 +86,7 @@ function CipherSelect() {
                 <CipherCard key={cipher.name} {...cipher} />
               ))}
               {filteredCiphers.length === 0 && (
-                <p className="text-xs text-grat-400 col-span-2">
+                <p className="text-xs text-gray-400 col-span-2">
                   No ciphers found matching "{search}"
                 </p>
               )}
