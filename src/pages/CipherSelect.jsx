@@ -47,6 +47,13 @@ const ciphers = [
     difficulty: "Beginner",
     to: "/cipher/base64",
   },
+  {
+    name: "Playfair",
+    description:
+      "Encrypts pairs of letters using a 5×5 keyword grid. Far stronger than single letter substitution ciphers.",
+    difficulty: "Intermediate",
+    to: "/cipher/playfair",
+  },
 ];
 
 function CipherSelect() {

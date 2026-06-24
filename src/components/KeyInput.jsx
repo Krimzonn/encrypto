@@ -1,6 +1,6 @@
 function KeyInput({ keyword, setKeyWord }) {
   return (
-    <div className="bg-surface border border-rw/15 rounded-lg o-5 mb-6">
+    <div className="bg-surface border border-rw/15 rounded-lg p-5 mb-6">
       <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-4">
         Keyword
       </p>

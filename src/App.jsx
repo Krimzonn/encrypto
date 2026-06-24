@@ -9,6 +9,7 @@ import RailFence from "./pages/RailFence";
 import { useTheme } from "./hooks/useTheme";
 import XOR from "./pages/XOR";
 import Base64 from "./pages/Base64";
+import Playfair from "./pages/Playfair";
 
 function App() {
   useTheme();
@@ -24,7 +25,8 @@ function App() {
           <Route path="/cipher/vigenere" element={<Vigenere />} />
           <Route path="/cipher/railfence" element={<RailFence />} />
           <Route path="/cipher/xor" element={<XOR />} />
-          <Route path="/cipher/base64" element={<Base64 />} />{" "}
+          <Route path="/cipher/base64" element={<Base64 />} />
+          <Route path="/cipher/playfair" element={<Playfair />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>
