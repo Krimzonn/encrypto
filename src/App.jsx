@@ -7,7 +7,7 @@ import AtBash from "./pages/AtBash";
 import Vigenere from "./pages/Vigenere";
 import RailFence from "./pages/RailFence";
 import { useTheme } from "./hooks/useTheme";
-import XOR from "./pages/Xor";
+import XOR from "./pages/XOR";
 
 function App() {
   useTheme();
