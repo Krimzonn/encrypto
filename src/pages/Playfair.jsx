@@ -10,6 +10,7 @@ import {
   playfairDecrypt,
   buildGrid,
 } from "../ciphers/playfair";
+import BackButton from "../components/BackButton";
 
 const modes = ["Encrypt", "Decrypt"];
 
@@ -20,7 +21,7 @@ function Playfair() {
 
   const output = useMemo(() => {
     if (!input) {
-      return;
+      return "";
     }
 
     if (mode === "Encrypt") {
@@ -36,13 +37,14 @@ function Playfair() {
 
   const grid = useMemo(() => {
     return buildGrid(keyword);
-  }, [input, keyword]);
+  }, [keyword]);
 
   return (
     <PageWrapper>
       <Navbar />
 
       <div className="max-w-3xl mx-auto px-8 py-14">
+        <BackButton to="/ciphers" />
         <FadeIn delay={0.1}>
           <p className="text-xs text-rw font-semibold tracking-widest uppercase mb-2">
             Playfair Cipher

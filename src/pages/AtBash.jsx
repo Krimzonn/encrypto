@@ -8,6 +8,7 @@ import atbashEncrypt, {
 } from "../ciphers/atbashCipher";
 import ModesTab from "../components/ModesTab";
 import CipherIO from "../components/CipherIO";
+import BackButton from "../components/BackButton";
 import { motion, AnimatePresence } from "framer-motion";
 
 const modes = ["Encrypt", "Decrypt"];
@@ -28,6 +29,7 @@ function AtBash() {
     <PageWrapper>
       <Navbar />
       <div className="max-w-3xl mx-auto px-8 py-14">
+        <BackButton to="/ciphers" />
         <FadeIn delay={0.1}>
           <p className="text-xs text-rw font-semibold tracking-widest uppercase mb-2">
             Atbash Cipher

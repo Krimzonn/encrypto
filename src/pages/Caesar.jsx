@@ -8,6 +8,7 @@ import PageWrapper from "../components/PageWrapper";
 import FadeIn from "../components/FadeIn";
 import ShiftSlider from "../components/ShiftSlider";
 import AlphabetMap from "../components/AlphabetMap";
+import BackButton from "../components/BackButton";
 
 function Caesar() {
   const [mode, setMode] = useState("Encrypt");
@@ -35,6 +36,7 @@ function Caesar() {
       <PageWrapper>
         <Navbar />
         <div className="max-w-3xl mx-auto px-8 py-14">
+          <BackButton to="/ciphers" />
           <FadeIn delay={0.1}>
             <p className="text-xs text-rw font-semibold tracking-widest uppercase mb-2">
               Caesar Cipher

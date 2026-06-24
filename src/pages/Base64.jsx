@@ -5,6 +5,7 @@ import FadeIn from "../components/FadeIn";
 import CipherIO from "../components/CipherIO";
 import ModesTab from "../components/ModesTab";
 import { base64Decode, base64Encode, buildBase64Map } from "../ciphers/base64";
+import BackButton from "../components/BackButton";
 import { motion } from "framer-motion";
 
 const modes = ["Encode", "Decode"];
@@ -38,6 +39,7 @@ function Base64() {
       <Navbar />
 
       <div className="max-w-3xl mx-auto px-8 py-14">
+        <BackButton to="/ciphers" />
         <FadeIn delay={0.1}>
           <p className="text-xs text-rw font-semibold tracking-widest uppercase mb-2">
             Base64
