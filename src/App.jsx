@@ -11,6 +11,7 @@ import XOR from "./pages/XOR";
 import Base64 from "./pages/Base64";
 import Playfair from "./pages/Playfair";
 import ColumnarCipher from "./pages/ColumnarCipher";
+import Affine from "./pages/AffineCipher";
 
 function App() {
   useTheme();
@@ -33,6 +34,7 @@ function App() {
             element={<div className="p-8 text-rw">Coming Soon!</div>}
           />
           <Route path="/cipher/columnar" element={<ColumnarCipher />} />
+          <Route path="/cipher/affine" element={<Affine />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>

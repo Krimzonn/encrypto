@@ -62,6 +62,13 @@ const ciphers = [
     difficulty: "Intermediate",
     to: "/cipher/columnar",
   },
+  {
+    name: "Affine Cipher",
+    description:
+      "Encrypts using the formula (a × x + b) mod 26. Key a must be coprime to 26. Generalizes both Caesar and Atbash.",
+    difficulty: "Hard",
+    to: "/cipher/affine",
+  },
 ];
 
 function CipherSelect() {
