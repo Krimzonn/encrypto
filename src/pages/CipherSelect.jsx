@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import CipherCard from "../components/CipherCard";
 import PageWrapper from "../components/PageWrapper";
 import FadeIn from "../components/FadeIn";
+import BackButton from "../components/BackButton";
 
 const ciphers = [
   {
@@ -51,8 +52,15 @@ const ciphers = [
     name: "Playfair",
     description:
       "Encrypts pairs of letters using a 5×5 keyword grid. Far stronger than single letter substitution ciphers.",
-    difficulty: "Intermediate",
+    difficulty: "Hard",
     to: "/cipher/playfair",
+  },
+  {
+    name: "Columnar Cipher",
+    description:
+      "Arranges text in rows under a keyword then reads columns in alphabetical order. A classic transposition cipher.",
+    difficulty: "Intermediate",
+    to: "/cipher/columnar",
   },
 ];
 
@@ -88,7 +96,7 @@ function CipherSelect() {
             />
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
               {filteredCiphers.map((cipher) => (
                 <CipherCard key={cipher.name} {...cipher} />
               ))}
@@ -98,6 +106,10 @@ function CipherSelect() {
                 </p>
               )}
             </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <BackButton to="/" />
           </FadeIn>
         </div>
       </PageWrapper>

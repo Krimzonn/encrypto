@@ -1,7 +1,9 @@
 import { useTheme } from "../hooks/useTheme";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const { isDark, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-rw px-8 py-4 flex items-center justify-between">
@@ -14,6 +16,12 @@ function Navbar() {
         </a>
         <a className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors">
           About
+        </a>
+        <a
+          onClick={() => navigate("/daily")}
+          className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
+        >
+          Daily Challenge
         </a>
         <button
           onClick={toggleTheme}
