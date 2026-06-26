@@ -11,10 +11,16 @@ function Navbar() {
         Encrypto <span className="text-gold">.</span>
       </div>
       <div className="flex gap-6">
-        <a className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors">
+        <a
+          onClick={() => navigate("/")}
+          className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
+        >
           Home
         </a>
-        <a className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors">
+        <a
+          onClick={() => navigate("/about")}
+          className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
+        >
           About
         </a>
         <a

@@ -12,6 +12,7 @@ import Base64 from "./pages/Base64";
 import Playfair from "./pages/Playfair";
 import ColumnarCipher from "./pages/ColumnarCipher";
 import Affine from "./pages/AffineCipher";
+import About from "./pages/About";
 
 function App() {
   useTheme();
@@ -35,6 +36,7 @@ function App() {
           />
           <Route path="/cipher/columnar" element={<ColumnarCipher />} />
           <Route path="/cipher/affine" element={<Affine />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </AnimatePresence>
     </BrowserRouter>
