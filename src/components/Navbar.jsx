@@ -28,13 +28,13 @@ function Navbar() {
             Home
           </a>
           <a
-            onClick={() => handleNav("/")}
+            onClick={() => handleNav("/about")}
             className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
           >
             About
           </a>
           <a
-            onClick={() => handleNav("/")}
+            onClick={() => handleNav("/daily")}
             className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
           >
             Daily Challenge
@@ -78,13 +78,13 @@ function Navbar() {
               Home
             </a>
             <a
-              onClick={() => handleNav("/")}
+              onClick={() => handleNav("/about")}
               className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
             >
               About
             </a>
             <a
-              onClick={() => handleNav("/")}
+              onClick={() => handleNav("/daily")}
               className="text-white tracking-widest text-xs cursor-pointer hover:text-gold transition-colors"
             >
               Daily Challenge
