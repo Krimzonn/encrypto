@@ -82,14 +82,14 @@ function CipherSelect() {
     <>
       <PageWrapper>
         <Navbar />
-        <div className="max-w-4xl mx-auto px-8 py-16">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 py-10 md:py-16">
           <FadeIn delay={0.1}>
             <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-2">
               Cipher Library
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <h1 className="text-3xl font-bold text-rw mb-10">
+            <h1 className="text-2xl md:text-3xl font-bold text-rw mb-10">
               Choose a <span className="text-gold">cipher</span>
             </h1>
           </FadeIn>
@@ -103,12 +103,12 @@ function CipherSelect() {
             />
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               {filteredCiphers.map((cipher) => (
                 <CipherCard key={cipher.name} {...cipher} />
               ))}
               {filteredCiphers.length === 0 && (
-                <p className="text-xs text-gray-400 col-span-2">
+                <p className="text-xs text-gray-400 col-span-3">
                   No ciphers found matching "{search}"
                 </p>
               )}
@@ -116,7 +116,9 @@ function CipherSelect() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <BackButton to="/" />
+            <div className="mt-8">
+              <BackButton to="/" />
+            </div>
           </FadeIn>
         </div>
       </PageWrapper>

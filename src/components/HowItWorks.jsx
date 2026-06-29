@@ -18,15 +18,15 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <div className="border-t border-rw/20 px-8 py-12">
-      <p className="text-cs font-semibold text-rw tracking-widest uppercase mb-8">
+    <div className="border-t border-rw/20 px-4 md:px-8 py-12">
+      <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-6 md:mb-8">
         How it works
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {steps.map((step) => (
           <div
             key={step.num}
-            className="bg-surface border border-rw/15 rounded-lg p-5"
+            className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5"
           >
             <div className="text-2xl font-bold text-gold mb-3">{step.num}</div>
             <div className="text-sm font-semibold text-rw mb-2">
