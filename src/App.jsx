@@ -13,6 +13,7 @@ import Playfair from "./pages/Playfair";
 import ColumnarCipher from "./pages/ColumnarCipher";
 import Affine from "./pages/AffineCipher";
 import About from "./pages/About";
+import DailyChallenges from "./pages/DailyChallenges";
 
 function App() {
   useTheme();
@@ -30,10 +31,7 @@ function App() {
           <Route path="/cipher/xor" element={<XOR />} />
           <Route path="/cipher/base64" element={<Base64 />} />
           <Route path="/cipher/playfair" element={<Playfair />} />
-          <Route
-            path="/daily"
-            element={<div className="p-8 text-rw">Coming Soon!</div>}
-          />
+          <Route path="/daily" element={<DailyChallenges />} />
           <Route path="/cipher/columnar" element={<ColumnarCipher />} />
           <Route path="/cipher/affine" element={<Affine />} />
           <Route path="/about" element={<About />} />

@@ -5,8 +5,8 @@ function CipherIO({ mode, input, setInput, output }) {
   const outputLabel = mode === "Decrypt" ? "Plaintext" : "Ciphertext";
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-      <div className="bg-surface border border-rw/15 rounded-lg p-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+      <div className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5">
         <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-3">
           {inputLabel}
         </p>
@@ -20,7 +20,7 @@ function CipherIO({ mode, input, setInput, output }) {
         ></textarea>
       </div>
 
-      <div className="bg-surface border border-rw/15 rounded-lg p-5">
+      <div className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5">
         <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-3">
           {outputLabel}
         </p>

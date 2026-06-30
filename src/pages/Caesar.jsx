@@ -35,14 +35,14 @@ function Caesar() {
     <>
       <PageWrapper>
         <Navbar />
-        <div className="max-w-3xl mx-auto px-8 py-14">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 py-10 md:py-14">
           <BackButton to="/ciphers" />
           <FadeIn delay={0.1}>
             <p className="text-xs text-rw font-semibold tracking-widest uppercase mb-2">
               Caesar Cipher
             </p>
 
-            <h1 className="text-3xl font-bold text-rw mb-10">
+            <h1 className="text-3xl font-bold text-rw mb-8 md:mb-10">
               Current Mode: <span className="text-gold">{mode}</span>
             </h1>
           </FadeIn>
@@ -67,7 +67,7 @@ function Caesar() {
 
             {mode === "Brute Force" && (
               <>
-                <div className="bg-surface border border-rw/15 rounded-lg p-5 m-6">
+                <div className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5 m-6">
                   <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-3">
                     Ciphertext to crack
                   </p>

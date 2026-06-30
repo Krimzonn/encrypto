@@ -86,8 +86,8 @@ function StatCard({ target, label, isText }) {
   const count = useCountUp(isText ? 0 : target);
 
   return (
-    <div className="bg-surface border border-rw/15 rounded-lg p-5 text-center">
-      <div className="text-2xl font-bold text-gold mb-1">
+    <div className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5 text-center">
+      <div className="text-xl md:text-2xl font-bold text-gold mb-1">
         {isText ? target : count}
       </div>
       <div className="text-xs text-gray-400">{label}</div>
@@ -154,15 +154,15 @@ function About() {
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={0.1}>
-          <div className="grid grid-cols-3 gap-4 mt-12 mb-12">
+          <div className="grid grid-cols-3 gap-3 md:gap-4 mt-10 md:mt-12 mb-10 md:mb-12">
             <StatCard target={9} label="Ciphers" />
             <StatCard target={3} label="Weeks to build" />
-            <StatCard target="Complete" label="Status" isText />
+            <StatCard target="Done" label="Status" isText />
           </div>
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <div className="mb-12">
+          <div className="mb-10 md:mb-12">
             <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-4">
               Purpose
             </p>
@@ -176,7 +176,7 @@ function About() {
         </ScrollFadeIn>
 
         <ScrollFadeIn>
-          <div className="mb-12">
+          <div className="mb-10 md:mb-12">
             <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-4">
               The Ciphers
             </p>
@@ -209,7 +209,7 @@ function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.08 }}
-                  className="bg-surface border border-rw/15 rounded-lg p-5"
+                  className="bg-surface border border-rw/15 rounded-lg p-4 md:p-5"
                 >
                   <p className="text-sm font-semibold text-rw mb-1">
                     {tech.name}
@@ -228,7 +228,7 @@ function About() {
             <p className="text-xs font-semibold text-rw tracking-widest uppercase mb-4">
               Who Built This
             </p>
-            <div className="bg-surface border border-rw/15 rounded-lg p-6 flex items-center gap-5">
+            <div className="bg-surface border border-rw/15 rounded-lg p-5 md:p-6 flex items-center gap-4 md:gap-5">
               <div className="w-12 h-12 rounded-full bg-rw flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                 AA
               </div>
