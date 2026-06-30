@@ -56,7 +56,7 @@ function Navbar() {
           </button>
           <button
             onClick={() => setMenuOpen((prev) => !prev)}
-            className="text-white textlg cursor-pointer"
+            className="text-white text-lg cursor-pointer"
           >
             {menuOpen ? "✕" : "☰"}
           </button>
