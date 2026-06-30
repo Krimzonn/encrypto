@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 function Navbar() {
   const { isDark, toggleTheme } = useTheme();
   const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState("false");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function handleNav(path) {
     navigate(path);
